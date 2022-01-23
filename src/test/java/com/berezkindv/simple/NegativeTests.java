@@ -1,4 +1,4 @@
-package com.berezkindv;
+package com.berezkindv.simple;
 
 import org.junit.jupiter.api.Test;
 
