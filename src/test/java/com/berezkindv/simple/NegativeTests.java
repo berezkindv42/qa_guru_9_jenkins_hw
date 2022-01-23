@@ -2,27 +2,27 @@ package com.berezkindv.simple;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class NegativeTests {
     @Test
     void test00() {
-        assertTrue(false);
+        assertFalse(false);
     }
 
     @Test
     void test01() {
-        assertTrue(false);
+        assertFalse(false);
     }
 
     @Test
     void test02() {
-        assertTrue(false);
+        assertFalse(false);
     }
 
     @Test
     void test03() {
-        assertTrue(false);
+        assertFalse(false);
     }
 
 }
