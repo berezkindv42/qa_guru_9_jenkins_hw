@@ -1,6 +1,11 @@
 package com.berezkindv.registrationForm;
 
 import com.berezkindv.registrationForm.pages.RegistrationPage;
+import io.qameta.allure.Link;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.berezkindv.registrationForm.TestData.*;
@@ -10,6 +15,10 @@ public class RegistrationFormTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Owner("berezkindv")
+    @DisplayName("Тест заполнения формы регистрации студента")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(value = "Форма регистрации", url = "https://demoqa.com/automation-practice-form")
     void fillFormTests() {
 
         registrationPage

@@ -3,6 +3,7 @@ package com.berezkindv.registrationForm;
 import com.berezkindv.helpers.Attach;
 import com.codeborne.selenide.Configuration;
 //import com.codeborne.selenide.logevents.SelenideLogger;
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 //import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -19,6 +20,7 @@ public class TestBase {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = System.getProperty("remote_driver_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
@@ -31,6 +33,7 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
+        Selenide.closeWebDriver();
         Attach.addVideo();
     }
 }
