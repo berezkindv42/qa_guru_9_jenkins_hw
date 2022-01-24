@@ -24,7 +24,7 @@ public class RegistrationFormTests extends TestBase {
                 .hobbiesCheckBoxSelect(hobbiesSports)
                 .hobbiesCheckBoxSelect(hobbiesReading)
                 .hobbiesCheckBoxSelect(hobbiesMusic)
-                .uploadFile("img/1.png")
+//                .uploadFile("img/1.png")
                 .fillStateField()
                 .fillCityField();
         registrationPage.calendarComponent.setBirthDate("12", "April", "1961");
@@ -39,7 +39,7 @@ public class RegistrationFormTests extends TestBase {
                 .assertsForm("Date of Birth", "12 April,1961")
                 .assertsForm("Subjects", subject)
                 .assertsForm("Hobbies", hobbiesSports + "," + " " + hobbiesReading + "," + " " + hobbiesMusic)
-                .assertsForm("Picture", "1.png")
+//                .assertsForm("Picture", "1.png")
                 .assertsForm("Address", currentAddress)
                 .assertsForm("State and City", state + " " + city)
                 .closeTable();
